@@ -1,0 +1,115 @@
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.navigation-bar{
+    display: none;
+}
+
+/* styling the header*/
+header{
+    top: 0;
+    background: #000;
+    position: sticky;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #423940;
+    padding: 0 15px;
+    z-index: 10;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header .brand-logo a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+header .nav-bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+header .nav-bar ul li{
+    display: inline-block; 
+    margin-left: 35px;
+}
+header .nav-bar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 75px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+}
+header .fixed .nav-bar ul li a{
+    color: #ffffff;
+}
+header .nav-bar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    transition: all .5% ease;
+
+}
+header .nav-bar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .nav-bar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}
+/*home ackground*/
+.home-intro{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.home-intro .intro-content-in{
+    text-align: center;
+    position: absolute;
+}
+.home-intro .overlay-intro{
+   background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100%;
+    widows: 100%;
+    opacity: .9;
+}
+.home-intro .title-intro{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 4rem;
+    text-align: center;
+    padding-left: 350px;
+    padding-top: 250[x];
+}
